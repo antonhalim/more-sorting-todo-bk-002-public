@@ -74,6 +74,27 @@ If the computer was asked to "show its work", the print out might look something
 # remainders       [ 0,  1,  4,  5,  6]
 ```
 
+If there is a tie, for instance, say you had an array of the following variable:
+
+```ruby
+numbers = [10, 29, 7, 6, 13, 16, 11]
+```
+
+If `#sort_by_remainder` was called on this array with the divisor of 5, you could find all the remainders for each number when it is divided by 5:
+
+```ruby
+numbers        = [10, 29, 7, 6, 13, 16, 11]
+# remainders   = [ 0,  4, 2, 1,  3,  1,  1]
+```
+
+Notice how the numbers 6, 16, and 11 all have a reminder of 1. Therefore, they should be sorted by how big they are (6 then 11 then 16).
+
+```ruby
+numbers.sort_by_remainder(5)
+# =>         [10, 6, 11, 16, 7, 13, 29]
+# remainders [ 0, 1,  1,  1, 2,  3,  4]
+```
+
 ## Resources
 
 * [Difference between Modulus and Division Operators in Ruby](https://railssavvy.wordpress.com/2013/01/30/difference-between-modulus-and-division-operator-in-ruby/)
