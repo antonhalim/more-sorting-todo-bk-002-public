@@ -54,15 +54,15 @@ describe "#sort_by_remainder" do
     numbers = [10, 29, 7, 6, 13, 16, 11]
     sorted_numbers = [10, 6, 11, 16, 7, 13, 29]
     # remainders   = [ 0, 1,  1,  1, 2,  3,  4]
-    expect(numbers.sort_by_remainder(5)).to eq(sorted_numbers)    
+    expect(numbers.sort_by_remainder(5)).to eq(sorted_numbers)
   end
 
   it "sorts numbers by value when there are multiple ties" do
     numbers = [10, 29, 7, 6, 13, 11, 16, 18, 5003]
     sorted_numbers = [10, 6, 11, 16, 7, 13, 18, 5003, 29]
     # remainders   = [ 0, 1,  1,  1, 2,  3,  3,    3,  4]
-    expect(numbers.sort_by_remainder(5)).to eq(sorted_numbers) 
-  end  
+    expect(numbers.sort_by_remainder(5)).to eq(sorted_numbers)
+  end
 
   it "doesn't permanently change the original array" do
     first_numbers = [126, 76, 13001, 64, 13]
